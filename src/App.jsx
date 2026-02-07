@@ -1,9 +1,8 @@
-
 import './App.css'
-import Welcome from './components/Welcome'
-import Car from './components/Car'
-import { Routes, Route } from 'react-router'
+import { Routes, Route, Link } from 'react-router-dom'
+
 import Home from './pages/Home'
+import About from './pages/About'
 
 function App() {
   return (
@@ -20,16 +19,11 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        {/* products */}
-        {/* shop */}
-        {/* cart */}
-        {/* payment */}
-        {/* contacts */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
