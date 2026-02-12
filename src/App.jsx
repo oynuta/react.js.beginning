@@ -2,21 +2,24 @@ import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
-import About from './pages/About'
+import Movies from './pages/Movies'
 import Products from './pages/Products'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
 import Payments from './pages/Payments'
 import Contacts from './pages/Contacts'
 
+<Link to="/movies">Movies</Link>
+
+
 function App() {
   return (
     <>
       <nav className="navbar">
-        <div className="logo">MyStore</div>
+        <div className="logo">Movies</div>
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <Link to="/movies">Movies</Link>
           <Link to="/products">Products</Link>
           <Link to="/shop">Shop</Link>
           <Link to="/cart">Cart</Link>
@@ -28,7 +31,7 @@ function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/movies" element={<Movies />} />
           <Route path="/products" element={<Products />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
